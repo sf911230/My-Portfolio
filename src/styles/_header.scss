@@ -1,0 +1,76 @@
+@import "colours";
+
+// HEADER
+
+.header {
+  &-wrapper {
+    height: 300px;
+    background-image: url("../../public/images/woodBackground.jpg");
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+  }
+
+  &-layer {
+    background-color: rgba(0, 0, 0, 0.7);
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    @media (min-width: 768px) {
+      flex-direction: row;
+    }
+  }
+
+  &-headline {
+    margin: 0;
+    font-size: 60px;
+    color: $gray;
+    text-align: center;
+
+    @media (min-width: 768px) {
+      font-size: 80px;
+    }
+
+    @media (min-width: 992px) {
+      font-size: 80px;
+      text-align: left;
+    }
+  }
+
+  &-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    @media (min-width: 992px) {
+      flex-direction: row;
+    }
+  }
+
+  &-profileImage {
+    height: 110px;
+    width: 110px;
+
+    @media (min-width: 768px) {
+      margin: auto;
+      height: 120px;
+      width: 120px;
+    }
+
+    @media (min-width: 992px) {
+      margin-right: 50px;
+    }
+
+    img {
+      height: 100%;
+      width: 100%;
+      border-radius: 50%;
+      border: 2px solid $mainColour;
+    }
+  }
+}
